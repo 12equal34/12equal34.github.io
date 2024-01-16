@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "단형성, 다형성, 그리고 제너릭 프로그래밍"
 categories:
   - Programming
@@ -115,7 +114,7 @@ Array Multiplied: 2 4 6 8 10
 ~~~cpp
 class ContainerOfInt
 {
-public: // 인터페이스 설계가 중요하다.
+public:
     virtual int Size() const = 0;
     int& operator[](int i)
     {
@@ -271,7 +270,7 @@ void Test()
 }
 ~~~
 
-> 얕은 복제를 하는 문제점이 있지만 생략했다.
+얕은 복제를 하는 문제점이 있지만 생략했다.
 
 ~~~output
 Array: 1 2 3 4 5
@@ -374,4 +373,3 @@ concept concept-name attr(optional) = constraint-expression;
 
 `c++20`부터 `concept`이 도입되었지만,
 아직은 `Unreal Engine 5.3 Documents`의 코딩 표준에서 `concept`에 대한 지침사항이 안 적혀 있다.
-추후에 공부할 예정이다. 언젠가는..
